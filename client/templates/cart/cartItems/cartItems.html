@@ -1,0 +1,36 @@
+<template name="autoflyCartDrawerItems">
+    <div class="cart-items" id="{{productId}}{{variants._id}}">
+        <div class="remove-cart-item fa fa-times fa-lg" data-target="{{productId}}{{variants._id}}"></div>
+
+        <a href="{{pathForSEO 'product' 'productId'}}/{{variants._id}}" data-event-category="cart" data-event-action="product-click" data-event-label="Cart product click" data-event-value="{{productId}}">
+
+          {{#with media}}
+          <div class="center-cropped" style="background-image: url('{{url store='small'}}');">
+            <img src="{{url store='small'}}" class="product-grid-item-images img-responsive">
+        </div>
+        {{else}}
+        <div class="center-cropped" style="background-image: url('/resources/placeholder.gif');">
+            <img src= "/resources/placeholder.gif" class="product-grid-item-images img-responsive">
+        </div>
+        {{/with}}
+
+    </a>
+    <div class="cart-labels">
+        {{#if cart.showItemLowInventoryWarning variants}}
+        <div class="badge badge-low-inv-warning" title="{{variants.inventoryQuantity}} {{i18n 'cartDrawerItems.left'}}">!</div>
+        {{/if}}
+        <span class="cart-item-title">{{variants.title}}</span>
+    </div>
+    <div class="cart-price">
+        {{formatPrice variants.price}}
+  </div>
+   <div class="cart-quantity">
+        Quantity
+        <div>
+          <button type="button" id="cartSignMinus" class="sign" data-dismiss="modal" aria-label="Subtract"><span aria-hidden="true">-</span></button> 
+          <input type="number" class="input-md qty-textbox" name="cartItemQty" id="add-to-cart-quantity" min="0" value="{{quantity}}">
+          <button type="button" id="cartSignPlus" class="sign" data-dismiss="modal" aria-label="Add"><span aria-hidden="true">+</span></button>
+        </div>
+  </div>
+</div>
+</template>

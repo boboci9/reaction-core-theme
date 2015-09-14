@@ -1,0 +1,37 @@
+<template name="autoflyCartDrawer">
+	<div id="cart-drawer-container" class="modal fade" data-backdrop="static" data-keyboard="false">
+		{{> displayCartDrawer}}
+	</div>
+</template>
+
+
+<template name="autoflyOpenCartDrawer">
+
+	<div class="cart-drawer" id="cart-drawer">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<div class="cart-drawer-swiper-container">
+			<div class="cart-drawer-swiper-wrapper">
+
+				{{#each cartItems}}
+				<div class="cart-drawer-swiper-slide">
+					{{>cartDrawerItems}}
+				</div>
+				{{/each}}
+			</div>
+			<div class="cart-drawer-pagination"></div>
+		</div>
+		
+		<div class="autofly-cart-drawer-review">
+			<hr>
+			<div class="cart-drawer-swiper-slide">
+				{{>cartSubTotals}}
+				<span class="btn btn-success btn-lg btn-block" id="btn-checkout" data-i18n="cartDrawer.checkout" data-event-category="cart" data-event-action="checkout-click" data-event-label="checkout button click" data-event-value="{{_id}}">
+					Checkout now
+				</span>
+			</div>
+			<div class="row">
+				
+			</div>
+		</div>
+	</div>
+</template>

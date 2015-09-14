@@ -12,14 +12,53 @@
     font-size: 1.1em;
     white-space: nowrap;
     overflow: hidden;
-    text-align: center;
     color: @product-overlay-text;
     .warning {
-        position:relative;
-        font-weight:bold;
-        font-size:inherit;
-        padding:2px 8px 2px 8px;
-        background-color:#FF0000;
+      position:relative;
+      font-weight:bold;
+      font-size:inherit;
+      padding:2px 8px 2px 8px;
+      background-color:#FF0000;
+    }
+  }
+  .cart-price {
+    margin: -10px 0 0 0;
+    height: 45px;
+    padding: 5px;
+    background-color: @product-overlay-bg;
+    width: 235px;
+    font-size: 2.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    color: @product-overlay-text;
+  }
+  .cart-quantity {
+    margin: -5px 0 0 0;
+    height: 80px;
+    padding: 5px;
+    background-color: @product-overlay-bg;
+    width: 235px;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    color: @product-overlay-text;
+    .sign{
+      font-size: xx-large;
+      border: 1px solid white;
+      padding: 4px 9px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 0;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      -webkit-appearance: none;
+    }
+    .qty-textbox{
+      width: 55px;
+      color: black;
+      padding-left: 15px;
+      text-align: center;
     }
   }
 
@@ -36,18 +75,18 @@
   }
 
   .center-cropped {
-      width: 235px;
-      height: 225px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow: hidden;
+    width: 235px;
+    height: 225px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
   }
 
   /* Set the image to fill its parent and make transparent */
   .center-cropped img {
-     min-height: 100%;
-     min-width: 100%;
-     opacity: 0;
-  }
+   min-height: 100%;
+   min-width: 100%;
+   opacity: 0;
+ }
 }
