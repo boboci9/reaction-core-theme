@@ -2,7 +2,7 @@ Package.describe({
   name: "autofly:theme",
   summary: "Reaction Commerce core theme",
   version: "1.6.0",
-  git: "https://github.com/reactioncommerce/core-theme.git"
+  git: "https://bitbucket.org/auecommerce/autofly-theme"
 });
 
 Package.onUse(function(api) {
@@ -12,8 +12,6 @@ Package.onUse(function(api) {
 
   api.use([
     'templating',
-    // "jquery",
-    // "less",
     ], ["client", "server"]);
   
   api.addFiles([
