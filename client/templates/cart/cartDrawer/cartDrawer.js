@@ -3,14 +3,6 @@ Template.autoflyCartDrawer.inheritsEventsFrom("cartDrawer");
 Template.autoflyCartDrawer.replaces("cartDrawer");
 
 
-
-
-Template.autoflyOpenCartDrawer.inheritsHelpersFrom("openCartDrawer");
-Template.autoflyOpenCartDrawer.inheritsEventsFrom("openCartDrawer");
-Template.autoflyOpenCartDrawer.replaces("openCartDrawer");
-
-
-
 Template.openCartDrawer.events({
 	'click #btn-checkout': function(event, template) {
 		Session.set("displayCart", false);
@@ -35,6 +27,10 @@ Template.openCartDrawer.events({
 		}
 	}
 })
+
+
+Template.autoflyOpenCartDrawer.inheritsHelpersFrom("openCartDrawer");
+Template.autoflyOpenCartDrawer.replaces("openCartDrawer");
 
 Template.emptyCartDrawer.events({
 	'click #btn-keep-shopping': function(event, template) {

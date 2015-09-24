@@ -1,0 +1,24 @@
+<template name="autoflyLayoutHeader">
+    <div class="container-fluid">
+        <div class="nav" role="navigation">
+            <div class="row navbar-shop">
+                <div><a class="navbar-brand" href="{{pathFor 'index'}}">{{siteName}} </a></div>
+                <div class="navbar-become-seller">
+                    {{> Template.dynamic template='newcoBecomeASellerBtn'}}
+                </div>
+                 <div class="navbar-tags search">{{> Template.dynamic template='eltHeaderSearch'}}</div>
+                
+                <div class="cart-alert"><div class="cart-alert-text"></div></div>
+                <div class="navbar-accounts">{{> accounts tpl="loginDropdown"}}</div>
+                    <div class="newco-navbar-review-notification">{{> Template.dynamic template='newcoReviewNotification'}}</div>
+                <div class="navbar-languages">{{> i18nChooser}}</div>
+
+            </div>
+            <div class="row navbar-primary-tags">
+                <div class="navbar-tags">{{> headerTags}}</div>
+                <div class="navbar-cart">{{> cartIcon}}</div>
+            </div>
+        </div>
+    </div>
+    {{> Template.dynamic template='newcoReviewChooserModal'}}
+</template>
